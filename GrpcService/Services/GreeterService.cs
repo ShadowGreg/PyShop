@@ -61,7 +61,7 @@ public class CoinHolder: IUser // класс для банка с расшире
     public CoinItem GiveAwayCoin()
     {
         coinsList[0].AddHistory(_userProfile.Name + "/AWAY/");
-        _userProfile.Amount += 1;
+        _userProfile.Amount -= 1;
         CoinItem tempCoin = coinsList[0];
         coinsList.RemoveAt(0);
         return tempCoin;
@@ -145,9 +145,9 @@ public class CoinBank
             _coinHolders.Add(tempCoinHolder);
         }
     }
-    public CoinHolder GetCoinHolder(int inNum)
+    public CoinHolder GetCoinHolder(int holderNumber)
     {
-        return _coinHolders[inNum];
+        return _coinHolders[holderNumber];
     }
     private int AddCoinToHolder(CoinHolder inHolder, int coinNum, int amount)
     {

@@ -164,6 +164,17 @@ public class UnitTest1
         Assert.Equal(_positiveResponse, actualMsg);
     }
     [Fact]
+    public void CoinBank_BankMoveCoins_Test_User_Profile()
+    {
+        var testBank = new CoinBank(testProfiles);
+        var tempMsg = testBank.BankCoinEmission(_emissionAmount);
+        long amountBeforeMove = testBank.GetCoinHolder(0).GetUserProfile().Amount;
+        var firstUserBeforeMove = testBank.GetCoinHolder(0);
+        var actualMsg = testBank.BankMoveCoins(_positiveMove);
+        var amountAfterMove = testBank.GetCoinHolder(0).GetUserProfile().Amount;
+        Assert.NotEqual(amountBeforeMove, amountAfterMove);
+    }
+    [Fact]
     public void Find_MAX_History_Test()
     {
         Random rnd = new Random();

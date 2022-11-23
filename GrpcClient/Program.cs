@@ -17,6 +17,7 @@ async Task UserList()
         {
             Console.WriteLine("User: " + reply.ResponseStream.Current.Name);
             Console.WriteLine("User: " + reply.ResponseStream.Current.Amount);
+            Console.WriteLine();
         }
     }
 }
@@ -32,6 +33,7 @@ var therdReply = client.MoveCoins(
 UserList();
 var forthReply = client.LongestHistoryCoin(new None());
 Console.WriteLine("Coin history: " + forthReply.History);
+Console.WriteLine("Coin history: " + forthReply.Id);
 
 
 Console.WriteLine("Press any key to exit...");
