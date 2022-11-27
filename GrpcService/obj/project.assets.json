@@ -298,6 +298,15 @@
           }
         }
       },
+      "Spacetime.GRPCurl.Wrapper/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Spacetime.gRPC.Wrapper.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Spacetime.gRPC.Wrapper.dll": {}
+        }
+      },
       "System.Memory/4.5.3": {
         "type": "package",
         "compile": {
@@ -701,6 +710,18 @@
         "microsoft.extensions.primitives.nuspec"
       ]
     },
+    "Spacetime.GRPCurl.Wrapper/1.0.0": {
+      "sha512": "8GLaRrViTz76/a7lfRIxQZV34bQ4KLEpcr5YgcNPmlhujzhLZpOh7KuuWTxmrWrJIbx+kju/5zpWxhDKIifsJw==",
+      "type": "package",
+      "path": "spacetime.grpcurl.wrapper/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Spacetime.gRPC.Wrapper.dll",
+        "spacetime.grpcurl.wrapper.1.0.0.nupkg.sha512",
+        "spacetime.grpcurl.wrapper.nuspec"
+      ]
+    },
     "System.Memory/4.5.3": {
       "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "type": "package",
@@ -728,7 +749,8 @@
       "Google.Protobuf >= 3.21.9",
       "Grpc.AspNetCore >= 2.40.0",
       "Grpc.Net.Client >= 2.50.0",
-      "Grpc.Tools >= 2.50.0"
+      "Grpc.Tools >= 2.50.0",
+      "Spacetime.GRPCurl.Wrapper >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -798,6 +820,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.50.0, )"
+          },
+          "Spacetime.GRPCurl.Wrapper": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [

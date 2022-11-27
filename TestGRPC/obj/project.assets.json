@@ -910,6 +910,15 @@
           }
         }
       },
+      "Spacetime.GRPCurl.Wrapper/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Spacetime.gRPC.Wrapper.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Spacetime.gRPC.Wrapper.dll": {}
+        }
+      },
       "System.AppContext/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2107,7 +2116,8 @@
         "dependencies": {
           "Google.Protobuf": "3.21.9",
           "Grpc.AspNetCore": "2.40.0",
-          "Grpc.Net.Client": "2.50.0"
+          "Grpc.Net.Client": "2.50.0",
+          "Spacetime.GRPCurl.Wrapper": "1.0.0"
         },
         "compile": {
           "bin/placeholder/GrpcService.dll": {}
@@ -3491,6 +3501,18 @@
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
         "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.nuspec",
         "runtimes/ubuntu.16.10-x64/native/System.Security.Cryptography.Native.OpenSsl.so"
+      ]
+    },
+    "Spacetime.GRPCurl.Wrapper/1.0.0": {
+      "sha512": "8GLaRrViTz76/a7lfRIxQZV34bQ4KLEpcr5YgcNPmlhujzhLZpOh7KuuWTxmrWrJIbx+kju/5zpWxhDKIifsJw==",
+      "type": "package",
+      "path": "spacetime.grpcurl.wrapper/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net6.0/Spacetime.gRPC.Wrapper.dll",
+        "spacetime.grpcurl.wrapper.1.0.0.nupkg.sha512",
+        "spacetime.grpcurl.wrapper.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {

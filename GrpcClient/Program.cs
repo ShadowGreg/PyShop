@@ -7,34 +7,35 @@ var client = new Billing.BillingClient(channel);
 
 async Task UserList()
 {
+    Console.WriteLine();
+    Console.WriteLine("UserList:");
+
     var reply = client.ListUsers(new None());
     var hasNext = true;
     while (hasNext)
     {
         hasNext = await reply.ResponseStream.MoveNext(new CancellationToken());
 
-        if (hasNext)
-        {
-            Console.WriteLine("User: " + reply.ResponseStream.Current.Name);
-            Console.WriteLine("User: " + reply.ResponseStream.Current.Amount);
-            Console.WriteLine();
-        }
+        if (!hasNext) continue;
+
+        Console.WriteLine("User: " + reply.ResponseStream.Current.Name);
+        Console.WriteLine("Amount: " + reply.ResponseStream.Current.Amount);
+        Console.WriteLine();
     }
 }
 
-UserList();
-var secondReply = client.CoinsEmission(new EmissionAmount() { Amount = 10 });
+await UserList();
+var secondReply = client.CoinsEmission(new EmissionAmount { Amount = 10 });
 
 Console.WriteLine("EmissionAmount 10 Coin: " + secondReply.Status);
 
-UserList();
-var therdReply = client.MoveCoins(
-    new MoveCoinsTransaction() { SrcUser = "boris", DstUser = "maria", Amount = 5 });
-UserList();
-var forthReply = client.LongestHistoryCoin(new None());
-Console.WriteLine("Coin history: " + forthReply.History);
-Console.WriteLine("Coin history: " + forthReply.Id);
+await UserList();
 
+var thirdReply = client.MoveCoins(
+    new MoveCoinsTransaction { SrcUser = "boris", DstUser = "maria", Amount = 5 });
+Console.WriteLine("Move 5 Coins from boris to maria : " + thirdReply.Status);
+
+await UserList();
 
 Console.WriteLine("Press any key to exit...");
 

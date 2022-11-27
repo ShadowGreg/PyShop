@@ -66,6 +66,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.50.0, )"
+            },
+            "Spacetime.GRPCurl.Wrapper": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

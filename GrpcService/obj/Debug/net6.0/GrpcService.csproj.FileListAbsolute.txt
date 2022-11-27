@@ -27,3 +27,4 @@ C:\workspace\PyShop\GrpcService\obj\Debug\net6.0\refint\GrpcService.dll
 C:\workspace\PyShop\GrpcService\obj\Debug\net6.0\GrpcService.pdb
 C:\workspace\PyShop\GrpcService\obj\Debug\net6.0\GrpcService.genruntimeconfig.cache
 C:\workspace\PyShop\GrpcService\obj\Debug\net6.0\ref\GrpcService.dll
+C:\workspace\PyShop\GrpcService\bin\Debug\net6.0\Spacetime.gRPC.Wrapper.dll
